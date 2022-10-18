@@ -1,4 +1,4 @@
-name: Common Deploy
+name: Sandbox Deploy
 on:
   workflow_dispatch:
   push:
