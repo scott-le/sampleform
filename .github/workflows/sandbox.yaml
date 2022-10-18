@@ -5,6 +5,10 @@ on:
     branches:
       - 'master'
       
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   deploy-to-sandbox:
     uses: scott-le/sampleform/.github/workflows/build.yml@master
