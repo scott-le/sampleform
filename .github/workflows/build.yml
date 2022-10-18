@@ -15,9 +15,11 @@ env:
   EXECUTION_ROLE: arn:aws:iam::159726083039:role/itdev_role
   
 jobs:
-  build-deploy:
+  build-deploy:     
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{secrets.USER_ACCESS_KEY_ID }}
+        
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
