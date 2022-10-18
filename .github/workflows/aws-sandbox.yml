@@ -1,9 +1,7 @@
 name: SandboxDeploy
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
       
 env:
   EXECUTION_ROLE: arn:aws:iam::159726083039:role/itdev_role
