@@ -2,6 +2,10 @@ name: SandboxDeploy
 
 on:
   workflow_call:
+    inputs:
+      STACK_NAME:
+        required: true
+        type: string
     secrets:
       USER_ACCESS_KEY_ID:
         required: true
