@@ -1,0 +1,15 @@
+name: Common Deploy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+      
+jobs:
+  deploy-to-sandbox:
+    uses: scott-le/.github/workflows/aws-sandbox.yml@main
+    with:
+      STACK_NAME: Common
+    secrets:
+      USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      USER_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
