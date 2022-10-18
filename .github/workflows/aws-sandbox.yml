@@ -2,6 +2,10 @@ on:
   push:
     branches:
       - master
+      
+env:
+  EXECUTION_ROLE: arn:aws:iam::159726083039:role/itdev_role
+  
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -14,5 +18,11 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+          role-to-assume: ${{ env.EXECUTION_ROLE }}
+          role-session-name: nodejs-deployment
+          role-duration-seconds: 3600
+          role-skip-session-tagging: true
+          
+          
       # sam build 
       - run: sam build --use-container
