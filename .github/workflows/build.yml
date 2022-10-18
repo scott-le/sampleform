@@ -1,4 +1,4 @@
-name: SandboxDeploy
+name: Common Deploy
 
 on:
   workflow_call:
