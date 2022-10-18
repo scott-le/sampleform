@@ -7,7 +7,7 @@ on:
       
 jobs:
   deploy-to-sandbox:
-    uses: scott-le/.github/workflows/aws-sandbox.yml@master
+    uses: scott-le/sample/.github/workflows/build.yml@master
     with:
       STACK_NAME: Common
     secrets:
