@@ -8,7 +8,7 @@ on:
   workflow_call:
 
 env:
-  SCOTT_EXECUTION_ROLE: arn:aws:iam::159726083039:role/oicd_itdev_role
+  SCOTT_EXECUTION_ROLE: arn:aws:iam::159726083039:role/sampleform-role
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
