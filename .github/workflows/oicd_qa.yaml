@@ -11,4 +11,4 @@ permissions:
   
 jobs:
   deploy-feature:
-    uses: scott-le/pdf_info/.github/workflows/oicd_buildDeploy.yaml@master
+    uses: scott-le/sampleform/.github/workflows/oicd_buildDeploy.yaml@master
