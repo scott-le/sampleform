@@ -1,0 +1,14 @@
+name: QA_OICD
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+
+permissions:
+  id-token: write
+  contents: read
+  
+jobs:
+  deploy-feature:
+    uses: scott-le/pdf_info/.github/workflows/oicd_buildDeploy.yaml@main
